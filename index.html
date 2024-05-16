@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытка</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     .rose-petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: hsl(4, 80%, 60%);
+            border-radius: 50%;
+            animation: fall 3s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                top: -20px;
+                transform: translateX(-50%) rotate(0deg);
+            }
+            50% {
+                top: 50%;
+                transform: translateX(-50%) rotate(180deg);
+            }
+            100% {
+                top: 100%;
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="question">Как тебя зовут?</h1>
+        <input type="text" id="name-input" placeholder="Введи своё имя">
+        <button id="submit-name">❤️</button>
+        <h2 id="love-message"></h2>
+        <div id="rose-petal-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
